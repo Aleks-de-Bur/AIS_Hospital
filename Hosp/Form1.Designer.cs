@@ -30,7 +30,24 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnRed = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbSun = new System.Windows.Forms.TextBox();
+            this.tbFr = new System.Windows.Forms.TextBox();
+            this.tbThur = new System.Windows.Forms.TextBox();
+            this.tbWen = new System.Windows.Forms.TextBox();
+            this.tbTues = new System.Windows.Forms.TextBox();
+            this.tbMon = new System.Windows.Forms.TextBox();
+            this.tbDoc = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.doctors = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,29 +56,8 @@
             this.thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRed = new System.Windows.Forms.Button();
-            this.tbDoc = new System.Windows.Forms.TextBox();
-            this.tbMon = new System.Windows.Forms.TextBox();
-            this.tbTues = new System.Windows.Forms.TextBox();
-            this.tbWen = new System.Windows.Forms.TextBox();
-            this.tbThur = new System.Windows.Forms.TextBox();
-            this.tbFr = new System.Windows.Forms.TextBox();
-            this.tbSun = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numPal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.BtnRedPat = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnDelPat = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -73,14 +69,18 @@
             this.tbDiag = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.tbPatient = new System.Windows.Forms.TextBox();
-            this.BtnRedPat = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numPal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -106,18 +106,171 @@
             this.tabPage1.Text = "Расписание врачей";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // btnRed
             // 
-            this.tabPage2.Controls.Add(this.BtnRedPat);
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1143, 552);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Больные";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btnRed.Location = new System.Drawing.Point(782, 396);
+            this.btnRed.Name = "btnRed";
+            this.btnRed.Size = new System.Drawing.Size(172, 49);
+            this.btnRed.TabIndex = 2;
+            this.btnRed.Text = "Редактировать";
+            this.btnRed.UseVisualStyleBackColor = true;
+            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnOK);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tbSun);
+            this.panel1.Controls.Add(this.tbFr);
+            this.panel1.Controls.Add(this.tbThur);
+            this.panel1.Controls.Add(this.tbWen);
+            this.panel1.Controls.Add(this.tbTues);
+            this.panel1.Controls.Add(this.tbMon);
+            this.panel1.Controls.Add(this.tbDoc);
+            this.panel1.Location = new System.Drawing.Point(781, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(356, 383);
+            this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(3, 331);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(172, 49);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Удалить";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(181, 331);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(172, 49);
+            this.btnOK.TabIndex = 14;
+            this.btnOK.Text = "Принять изменения";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(180, 162);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Сб-Вс";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(180, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Пятница";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(180, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Четверг";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(180, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Среда";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(180, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Вторник";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Понедельник";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(180, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "ФИО врача";
+            // 
+            // tbSun
+            // 
+            this.tbSun.Location = new System.Drawing.Point(3, 159);
+            this.tbSun.Name = "tbSun";
+            this.tbSun.Size = new System.Drawing.Size(170, 20);
+            this.tbSun.TabIndex = 6;
+            // 
+            // tbFr
+            // 
+            this.tbFr.Location = new System.Drawing.Point(3, 133);
+            this.tbFr.Name = "tbFr";
+            this.tbFr.Size = new System.Drawing.Size(170, 20);
+            this.tbFr.TabIndex = 5;
+            // 
+            // tbThur
+            // 
+            this.tbThur.Location = new System.Drawing.Point(3, 107);
+            this.tbThur.Name = "tbThur";
+            this.tbThur.Size = new System.Drawing.Size(170, 20);
+            this.tbThur.TabIndex = 4;
+            // 
+            // tbWen
+            // 
+            this.tbWen.Location = new System.Drawing.Point(3, 81);
+            this.tbWen.Name = "tbWen";
+            this.tbWen.Size = new System.Drawing.Size(170, 20);
+            this.tbWen.TabIndex = 3;
+            // 
+            // tbTues
+            // 
+            this.tbTues.Location = new System.Drawing.Point(3, 55);
+            this.tbTues.Name = "tbTues";
+            this.tbTues.Size = new System.Drawing.Size(170, 20);
+            this.tbTues.TabIndex = 2;
+            // 
+            // tbMon
+            // 
+            this.tbMon.Location = new System.Drawing.Point(3, 29);
+            this.tbMon.Name = "tbMon";
+            this.tbMon.Size = new System.Drawing.Size(170, 20);
+            this.tbMon.TabIndex = 1;
+            // 
+            // tbDoc
+            // 
+            this.tbDoc.Location = new System.Drawing.Point(3, 3);
+            this.tbDoc.Name = "tbDoc";
+            this.tbDoc.Size = new System.Drawing.Size(170, 20);
+            this.tbDoc.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -137,7 +290,7 @@
             // 
             // doctors
             // 
-            this.doctors.HeaderText = "Врачи";
+            this.doctors.HeaderText = "Врач";
             this.doctors.Name = "doctors";
             this.doctors.ReadOnly = true;
             // 
@@ -177,208 +330,28 @@
             this.saturday.Name = "saturday";
             this.saturday.ReadOnly = true;
             // 
-            // panel1
+            // tabPage2
             // 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnOK);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.tbSun);
-            this.panel1.Controls.Add(this.tbFr);
-            this.panel1.Controls.Add(this.tbThur);
-            this.panel1.Controls.Add(this.tbWen);
-            this.panel1.Controls.Add(this.tbTues);
-            this.panel1.Controls.Add(this.tbMon);
-            this.panel1.Controls.Add(this.tbDoc);
-            this.panel1.Location = new System.Drawing.Point(781, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(356, 383);
-            this.panel1.TabIndex = 1;
-            this.panel1.Visible = false;
+            this.tabPage2.Controls.Add(this.BtnRedPat);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1143, 552);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Больные";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnRed
+            // BtnRedPat
             // 
-            this.btnRed.Location = new System.Drawing.Point(782, 396);
-            this.btnRed.Name = "btnRed";
-            this.btnRed.Size = new System.Drawing.Size(172, 49);
-            this.btnRed.TabIndex = 2;
-            this.btnRed.Text = "Редактировать";
-            this.btnRed.UseVisualStyleBackColor = true;
-            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
-            // 
-            // tbDoc
-            // 
-            this.tbDoc.Location = new System.Drawing.Point(3, 3);
-            this.tbDoc.Name = "tbDoc";
-            this.tbDoc.Size = new System.Drawing.Size(170, 20);
-            this.tbDoc.TabIndex = 0;
-            // 
-            // tbMon
-            // 
-            this.tbMon.Location = new System.Drawing.Point(3, 29);
-            this.tbMon.Name = "tbMon";
-            this.tbMon.Size = new System.Drawing.Size(170, 20);
-            this.tbMon.TabIndex = 1;
-            // 
-            // tbTues
-            // 
-            this.tbTues.Location = new System.Drawing.Point(3, 55);
-            this.tbTues.Name = "tbTues";
-            this.tbTues.Size = new System.Drawing.Size(170, 20);
-            this.tbTues.TabIndex = 2;
-            // 
-            // tbWen
-            // 
-            this.tbWen.Location = new System.Drawing.Point(3, 81);
-            this.tbWen.Name = "tbWen";
-            this.tbWen.Size = new System.Drawing.Size(170, 20);
-            this.tbWen.TabIndex = 3;
-            // 
-            // tbThur
-            // 
-            this.tbThur.Location = new System.Drawing.Point(3, 107);
-            this.tbThur.Name = "tbThur";
-            this.tbThur.Size = new System.Drawing.Size(170, 20);
-            this.tbThur.TabIndex = 4;
-            // 
-            // tbFr
-            // 
-            this.tbFr.Location = new System.Drawing.Point(3, 133);
-            this.tbFr.Name = "tbFr";
-            this.tbFr.Size = new System.Drawing.Size(170, 20);
-            this.tbFr.TabIndex = 5;
-            // 
-            // tbSun
-            // 
-            this.tbSun.Location = new System.Drawing.Point(3, 159);
-            this.tbSun.Name = "tbSun";
-            this.tbSun.Size = new System.Drawing.Size(170, 20);
-            this.tbSun.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "ФИО врача";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Понедельник";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Вторник";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(180, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Среда";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(180, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Четверг";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Пятница";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(180, 162);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Сб-Вс";
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(181, 331);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(172, 49);
-            this.btnOK.TabIndex = 14;
-            this.btnOK.Text = "Принять изменения";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.patient,
-            this.age,
-            this.diagnosis,
-            this.numPal});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(769, 540);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(3, 331);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(172, 49);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "Удалить";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // patient
-            // 
-            this.patient.HeaderText = "Пациент";
-            this.patient.Name = "patient";
-            this.patient.ReadOnly = true;
-            // 
-            // age
-            // 
-            this.age.HeaderText = "Возраст";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            // 
-            // diagnosis
-            // 
-            this.diagnosis.HeaderText = "Диагноз";
-            this.diagnosis.Name = "diagnosis";
-            this.diagnosis.ReadOnly = true;
-            // 
-            // numPal
-            // 
-            this.numPal.HeaderText = "Номер палаты";
-            this.numPal.Name = "numPal";
-            this.numPal.ReadOnly = true;
+            this.BtnRedPat.Location = new System.Drawing.Point(781, 395);
+            this.BtnRedPat.Name = "BtnRedPat";
+            this.BtnRedPat.Size = new System.Drawing.Size(172, 49);
+            this.BtnRedPat.TabIndex = 3;
+            this.BtnRedPat.Text = "Редактировать";
+            this.BtnRedPat.UseVisualStyleBackColor = true;
+            this.BtnRedPat.Click += new System.EventHandler(this.BtnRedPat_Click);
             // 
             // panel2
             // 
@@ -416,6 +389,7 @@
             this.btnAccept.TabIndex = 14;
             this.btnAccept.Text = "Принять изменения";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // label11
             // 
@@ -481,15 +455,42 @@
             this.tbPatient.Size = new System.Drawing.Size(170, 20);
             this.tbPatient.TabIndex = 0;
             // 
-            // BtnRedPat
+            // dataGridView2
             // 
-            this.BtnRedPat.Location = new System.Drawing.Point(781, 395);
-            this.BtnRedPat.Name = "BtnRedPat";
-            this.BtnRedPat.Size = new System.Drawing.Size(172, 49);
-            this.BtnRedPat.TabIndex = 3;
-            this.BtnRedPat.Text = "Редактировать";
-            this.BtnRedPat.UseVisualStyleBackColor = true;
-            this.BtnRedPat.Click += new System.EventHandler(this.BtnRedPat_Click);
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.patient,
+            this.age,
+            this.diagnosis,
+            this.numPal});
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(769, 540);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // patient
+            // 
+            this.patient.HeaderText = "Пациент";
+            this.patient.Name = "patient";
+            this.patient.ReadOnly = true;
+            // 
+            // age
+            // 
+            this.age.HeaderText = "Возраст";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            // 
+            // diagnosis
+            // 
+            this.diagnosis.HeaderText = "Диагноз";
+            this.diagnosis.Name = "diagnosis";
+            this.diagnosis.ReadOnly = true;
+            // 
+            // numPal
+            // 
+            this.numPal.HeaderText = "Номер палаты";
+            this.numPal.Name = "numPal";
+            this.numPal.ReadOnly = true;
             // 
             // Form1
             // 
@@ -499,15 +500,17 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Больница";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -529,13 +532,6 @@
         private System.Windows.Forms.TextBox tbMon;
         private System.Windows.Forms.TextBox tbDoc;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doctors;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tuesday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wednesday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thursday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn friday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn saturday;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -560,6 +556,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diagnosis;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPal;
         private System.Windows.Forms.Button BtnRedPat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tuesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wednesday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thursday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn friday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saturday;
     }
 }
 
