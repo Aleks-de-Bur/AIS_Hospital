@@ -58,19 +58,29 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numPal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnDelPat = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbNumb = new System.Windows.Forms.TextBox();
+            this.tbDiag = new System.Windows.Forms.TextBox();
+            this.tbAge = new System.Windows.Forms.TextBox();
+            this.tbPatient = new System.Windows.Forms.TextBox();
+            this.BtnRedPat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -98,6 +108,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.BtnRedPat);
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -187,6 +199,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 383);
             this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
             // 
             // btnRed
             // 
@@ -324,13 +337,10 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.patient,
+            this.age,
+            this.diagnosis,
+            this.numPal});
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(769, 540);
@@ -346,47 +356,140 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // patient
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Пациент";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.patient.HeaderText = "Пациент";
+            this.patient.Name = "patient";
+            this.patient.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // age
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Понедельник";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.age.HeaderText = "Возраст";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // diagnosis
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Вторник";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.diagnosis.HeaderText = "Диагноз";
+            this.diagnosis.Name = "diagnosis";
+            this.diagnosis.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // numPal
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Среда";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.numPal.HeaderText = "Номер палаты";
+            this.numPal.Name = "numPal";
+            this.numPal.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // panel2
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Четверг";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.panel2.Controls.Add(this.BtnDelPat);
+            this.panel2.Controls.Add(this.btnAccept);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.tbNumb);
+            this.panel2.Controls.Add(this.tbDiag);
+            this.panel2.Controls.Add(this.tbAge);
+            this.panel2.Controls.Add(this.tbPatient);
+            this.panel2.Location = new System.Drawing.Point(781, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(356, 383);
+            this.panel2.TabIndex = 2;
+            this.panel2.Visible = false;
             // 
-            // dataGridViewTextBoxColumn6
+            // BtnDelPat
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Пятница";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.BtnDelPat.Location = new System.Drawing.Point(3, 331);
+            this.BtnDelPat.Name = "BtnDelPat";
+            this.BtnDelPat.Size = new System.Drawing.Size(172, 49);
+            this.BtnDelPat.TabIndex = 15;
+            this.BtnDelPat.Text = "Удалить";
+            this.BtnDelPat.UseVisualStyleBackColor = true;
+            this.BtnDelPat.Click += new System.EventHandler(this.BtnDelPat_Click);
             // 
-            // dataGridViewTextBoxColumn7
+            // btnAccept
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Сб-Вс";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.btnAccept.Location = new System.Drawing.Point(181, 331);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(172, 49);
+            this.btnAccept.TabIndex = 14;
+            this.btnAccept.Text = "Принять изменения";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(180, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Номер палаты";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(180, 58);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Диагноз";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(180, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Возраст";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(180, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Пациент";
+            // 
+            // tbNumb
+            // 
+            this.tbNumb.Location = new System.Drawing.Point(3, 81);
+            this.tbNumb.Name = "tbNumb";
+            this.tbNumb.Size = new System.Drawing.Size(170, 20);
+            this.tbNumb.TabIndex = 3;
+            // 
+            // tbDiag
+            // 
+            this.tbDiag.Location = new System.Drawing.Point(3, 55);
+            this.tbDiag.Name = "tbDiag";
+            this.tbDiag.Size = new System.Drawing.Size(170, 20);
+            this.tbDiag.TabIndex = 2;
+            // 
+            // tbAge
+            // 
+            this.tbAge.Location = new System.Drawing.Point(3, 29);
+            this.tbAge.Name = "tbAge";
+            this.tbAge.Size = new System.Drawing.Size(170, 20);
+            this.tbAge.TabIndex = 1;
+            // 
+            // tbPatient
+            // 
+            this.tbPatient.Location = new System.Drawing.Point(3, 3);
+            this.tbPatient.Name = "tbPatient";
+            this.tbPatient.Size = new System.Drawing.Size(170, 20);
+            this.tbPatient.TabIndex = 0;
+            // 
+            // BtnRedPat
+            // 
+            this.BtnRedPat.Location = new System.Drawing.Point(781, 395);
+            this.BtnRedPat.Name = "BtnRedPat";
+            this.BtnRedPat.Size = new System.Drawing.Size(172, 49);
+            this.BtnRedPat.TabIndex = 3;
+            this.BtnRedPat.Text = "Редактировать";
+            this.BtnRedPat.UseVisualStyleBackColor = true;
+            this.BtnRedPat.Click += new System.EventHandler(this.BtnRedPat_Click);
             // 
             // Form1
             // 
@@ -403,6 +506,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,13 +544,22 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnDelPat;
+        private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbNumb;
+        private System.Windows.Forms.TextBox tbDiag;
+        private System.Windows.Forms.TextBox tbAge;
+        private System.Windows.Forms.TextBox tbPatient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numPal;
+        private System.Windows.Forms.Button BtnRedPat;
     }
 }
 

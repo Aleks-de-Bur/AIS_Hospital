@@ -19,7 +19,7 @@ namespace Hosp
 
         private void btnRed_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            panel1.Visible = !panel1.Visible;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -28,6 +28,16 @@ namespace Hosp
         }
 
         private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRedPat_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = !panel2.Visible;
+        }
+
+        private void BtnDelPat_Click(object sender, EventArgs e)
         {
 
         }
